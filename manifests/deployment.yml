@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: avisonakubernetesprojgit 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: avisonakubernetesprojgit 
+    spec:
+      containers:
+        - name: avisonakubernetesprojgit 
+          image: sanandamitraregistry.azurecr.io/avisonakubernetesprojgit
+          ports:
+          - containerPort: 80
